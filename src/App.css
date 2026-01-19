@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ================= APP BACKGROUND ================= */
+.app {
+  height: 100vh;        /* full viewport height */
+  width: 100vw;         /* full viewport width */
+
+  background-image: url("assets/image/background.jpeg");
+  background-size: 100% 100%;  /* stretch image to fill width + height */
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  position: relative;
+  overflow: hidden;     /* hide any overflow */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: transparent;
+  color: white;
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-item {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+.turf-id {
+  background-color: #d6f06b;
+  color: black;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
+  z-index: 20;
+}
+
+.close-icon {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #0a7c3a;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+  position: absolute;
+  bottom: 50px;          /* push hero to bottom */
+  left: 50%;
+  transform: translateX(-50%); /* horizontally center the container */
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;   /* center children horizontally */
+  text-align: center;    /* center text inside children */
+  gap: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero h1 {
+  font-size: 2.5rem;
+  text-align: center;    /* ensures h1 text is centered */
+  width: 100%;           /* optional, takes full container width */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.hero h2 {
+  font-size: 1.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
 }
