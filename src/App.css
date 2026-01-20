@@ -8,134 +8,36 @@
 
 /* ================= APP BACKGROUND ================= */
 .app {
-  height: 100vh;        /* full viewport height */
-  width: 100vw;         /* full viewport width */
+  height: 100vh;
+  width: 100vw;
 
-  background-image: url("assets/image/background.jpeg");
-  background-size: 100% 100%;  /* stretch image to fill width + height */
+  background-image: url("./assets/image/background.jpeg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 
   position: relative;
-  overflow: hidden;     /* hide any overflow */
-}
-
-
-
-
-
-
-/* ================= NAVBAR ================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  background: transparent;
-  color: white;
-  z-index: 10;
-}
-
-/* LEFT */
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.dashboard-icon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-}
-
-/* RIGHT */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.nav-item {
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.nav-item:hover {
-  text-decoration: underline;
-}
-
-.turf-id {
-  background-color: #d6f06b;
-  color: black;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* ================= SIDEBAR ================= */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100%;
-  background: white;
-  padding: 20px;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
-  z-index: 20;
-}
-
-.close-icon {
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.sidebar ul li:hover {
-  color: #0a7c3a;
+  overflow: hidden;
 }
 
 /* ================= HERO SECTION ================= */
 .hero {
   position: absolute;
-  bottom: 50px;          /* push hero to bottom */
+  bottom: 50px;
   left: 50%;
-  transform: translateX(-50%); /* horizontally center the container */
+  transform: translateX(-50%);
   
   display: flex;
   flex-direction: column;
-  align-items: center;   /* center children horizontally */
-  text-align: center;    /* center text inside children */
+  align-items: center;
+  text-align: center;
   gap: 10px;
   color: white;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  text-align: center;    /* ensures h1 text is centered */
-  width: 100%;           /* optional, takes full container width */
 }
-
 
 .hero h2 {
   font-size: 1.5rem;
