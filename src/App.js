@@ -1,19 +1,18 @@
-import React, { useState } from "react";
-import "./App.css";
-
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 function App() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div className="app">
-      <Sidebar open={open} setOpen={setOpen} />
-      <Navbar setOpen={setOpen} />
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        {/* Default page → Login */}
+        <Route path="/" element={<Login />} />
+
+        {/* Signup page */}
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
   );
 }
 
