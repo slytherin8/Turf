@@ -1,10 +1,16 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bgImage from "../assets/image/image.png";
+import googleIcon from "../assets/image/google.png";
+import eyeOpen from "../assets/image/eye-open.png";
+import eyeClose from "../assets/image/eye-close.png";
+
 import "../styles/authLayout.css";
 import "../styles/login.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="auth-container">
@@ -20,10 +26,31 @@ export default function Login() {
           <div className="tab">Login</div>
           <h2 className="title">Welcome Back!</h2>
 
-          <button className="google-btn">Continue with Google</button>
+          {/* GOOGLE BUTTON */}
+          <button className="google-btn">
+            <img src={googleIcon} alt="Google" className="google-icon" />
+            <span>Continue with Google</span>
+          </button>
 
-          <input className="input" type="email" placeholder="Email" />
-          <input className="input" type="password" placeholder="Password" />
+          {/* EMAIL INPUT (NO CHECK ICON) */}
+          <div className="input-wrapper">
+            <input className="input" type="email" placeholder="Email" />
+          </div>
+
+          {/* PASSWORD INPUT WITH EYE ICON */}
+          <div className="input-wrapper">
+            <input
+              className="input"
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+            />
+            <img
+              src={showPassword ? eyeOpen : eyeClose}
+              className="input-icon clickable"
+              alt="toggle password"
+              onClick={() => setShowPassword(!showPassword)}
+            />
+          </div>
 
           <div className="forgot">Forgot Password?</div>
 
