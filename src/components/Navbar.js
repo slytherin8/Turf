@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 
-import logo from "../assets/image/logo.jpeg";
+import logo from "../assets/image/logo.png";
 import dashboardIcon from "../assets/image/dashboard-img.jpg";
 
 const Navbar = ({ setOpen }) => {
