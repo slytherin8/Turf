@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Settings from "./pages/Setting";
+import "./styles/setting.css";
 
 function App() {
   return (
@@ -11,6 +13,9 @@ function App() {
 
         {/* Signup page */}
         <Route path="/signup" element={<Signup />} />
+
+        {/* Settings page */}
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>
   );
