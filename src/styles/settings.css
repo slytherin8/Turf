@@ -1,0 +1,70 @@
+.settings-container{
+  min-height:100vh;
+  background:#f4f6f8;
+  padding:40px;
+  text-align:center;
+}
+
+.settings-title{
+  font-size:34px;
+  margin-bottom:30px;
+  font-weight:bold;
+}
+
+/* Box */
+.settings-box{
+  width:70%;
+  margin:auto;
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Sections */
+.settings-section{
+  width:45%;
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+}
+
+.settings-section h2{
+  margin-bottom:20px;
+}
+
+.settings-section label{
+  margin-top:10px;
+  font-weight:600;
+}
+
+.settings-section input{
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  margin-top:5px;
+}
+
+.settings-section input:focus{
+  outline:none;
+  border-color:#00c853;
+}
+
+/* Button */
+.save-btn{
+  margin-top:30px;
+  padding:14px 40px;
+  border:none;
+  border-radius:25px;
+  background:#00c853;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.save-btn:hover{
+  background:#009624;
+}

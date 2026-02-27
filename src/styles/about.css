@@ -1,0 +1,29 @@
+/* ===== ABOUT SECTION ===== */
+.about{
+  width:100%;
+  min-height:100vh;
+  padding:80px 20px;
+  background:#ffffff;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* TITLE */
+.about h2{
+  font-size:36px;
+  margin-bottom:25px;
+  color:#1e293b;
+  letter-spacing:1px;
+}
+
+/* CONTENT */
+.about p{
+  max-width:800px;
+  font-size:18px;
+  line-height:1.8;
+  color:#555;
+}

@@ -1,33 +1,67 @@
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100%;
-  background: white;
-  padding: 20px;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.25);
-  z-index: 20;
+/* SIDEBAR */
+.sidebar{
+  position:fixed;
+  left:-260px;
+  top:0;
+  width:260px;
+  height:100vh;
+  background:#1e293b;
+  padding:25px;
+  transition:0.4s ease;
+  z-index:1000;
 }
 
-.close-icon {
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-  margin-bottom: 30px;
+/* OPEN */
+.sidebar.active{
+  left:0;
 }
 
-.sidebar ul {
-  list-style: none;
+/* CLOSE ICON */
+.close-btn{
+  width:28px;
+  cursor:pointer;
+  margin-bottom:35px;
+  transition:0.2s;
 }
 
-.sidebar ul li {
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
+.close-btn:active{
+  transform:scale(0.85);
 }
 
-.sidebar ul li:hover {
-  color: #0a7c3a;
+/* LIST */
+.sidebar ul{
+  list-style:none;
+  padding:0;
+}
+
+.sidebar li{
+  margin:18px 0;
+}
+
+/* 🔥 VERY IMPORTANT */
+.sidebar a{
+  color:#ffffff !important;   /* force same color */
+  text-decoration:none;
+}
+
+/* LINKS */
+.sidebar-link{
+  color:#ffffff;
+  font-size:18px;
+  padding:14px 18px;
+  display:block;
+  border-radius:8px;
+  transition:0.25s ease;
+}
+
+/* HOVER */
+.sidebar-link:hover{
+  background:#334155;
+  padding-left:24px;
+}
+
+/* CLICK */
+.sidebar-link:active{
+  transform:scale(0.92);
+  opacity:0.6;
 }

@@ -1,30 +1,40 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import logo from "../assets/image/logo.jpeg";
-import dashboardIcon from "../assets/image/dashboard-img.jpg";
+import dashboard from "../assets/image/dashboard-img.jpg";
 
 const Navbar = ({ setOpen }) => {
   return (
-    <div className="navbar">
+
+    <nav className="navbar">
+
       {/* LEFT */}
       <div className="nav-left">
+
+        <img src={logo} alt="logo" className="logo"/>
+
         <img
-          src={dashboardIcon}
-          alt="Dashboard"
-          className="dashboard-icon"
+          src={dashboard}
+          alt="menu"
+          className="dash-icon"
           onClick={() => setOpen(true)}
         />
+
       </div>
 
       {/* RIGHT */}
       <div className="nav-right">
-        <span className="nav-item">Home</span>
-        <span className="nav-item">About Us</span>
-        <span className="LOGIN">LOGIN</span>
-        <img src={logo} alt="Logo" className="logo" />
+
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Register</Link>
+
       </div>
-    </div>
+
+    </nav>
   );
 };
 

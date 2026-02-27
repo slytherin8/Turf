@@ -1,51 +1,70 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-  background: transparent;
-  color: white;
-  z-index: 10;
+/* NAVBAR */
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+
+  /* 🔥 Transparent */
+  background:transparent;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  z-index:999;
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
+/* LEFT SIDE */
+.nav-left{
+  display:flex;
+  align-items:center;
 }
 
-.dashboard-icon {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+/* LOGO */
+.logo{
+  width:55px;
+  cursor:pointer;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 24px;
+/* DASHBOARD ICON */
+.dash-icon{
+  width:32px;
+  margin-left:20px;
+  cursor:pointer;
+  transition:0.2s;
 }
 
-.nav-item {
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
+/* 🔥 ICON CLICK BLINK */
+.dash-icon:active{
+  transform:scale(0.85);
 }
 
-.nav-item:hover {
-  text-decoration: underline;
+/* RIGHT SIDE LINKS */
+.nav-right{
+  display:flex;
+  align-items:center;
 }
 
-.LOGIN {
-  background-color: #d6f06b;
-  color: black;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-weight: bold;
+/* NAV LINKS */
+.nav-right a{
+  color:burlywood;
+  margin-left:30px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:500;
+
+  transition:0.25s;
 }
 
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+/* 🔥 HOVER EFFECT */
+.nav-right a:hover{
+  color:#00ffae;
+}
+
+/* 🔥 CLICK BLINK */
+.nav-right a:active{
+  transform:scale(0.85);
+  opacity:0.6;
 }
