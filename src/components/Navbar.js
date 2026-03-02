@@ -2,8 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import logo from "../assets/image/logo.jpeg";
+
+import logo from "../assets/image/logo.png";
 import dashboard from "../assets/image/dashboard-img.jpg";
+
+
+
+
 
 const Navbar = ({ setOpen }) => {
   return (

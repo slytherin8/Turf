@@ -21,6 +21,9 @@ export default function Signup() {
           <div className="tab1">Register</div>
           <h2 className="title">Create your account</h2>
 
+
+
+
           <button className="google-btn">
             <img src={googleIcon} alt="Google" className="google-icon" />
             <span>Continue with Google</span>
@@ -62,7 +65,12 @@ export default function Signup() {
             />
           </div>
 
-          <button className="btn">Sign up</button>
+
+          
+
+          <button className="btn" onClick={() => navigate("/settings")}>Sign up</button>
+
+
           <div className="link">
             Already have an account? <span onClick={() => navigate("/")}>Login</span>
           </div>

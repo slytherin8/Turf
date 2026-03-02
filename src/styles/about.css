@@ -1,29 +1,29 @@
-/* ===== ABOUT SECTION ===== */
-.about{
-  width:100%;
-  min-height:100vh;
-  padding:80px 20px;
-  background:#ffffff;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+/* ABOUT SECTION */
+.about {
+  width: 100%;
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+/* HEADER */
+.about-header{
+  background:linear-gradient(to right,#1faa59,#43d17c);
+  padding:25px;
   text-align:center;
+  color:white;
+  letter-spacing:2px;
 }
 
-/* TITLE */
-.about h2{
-  font-size:36px;
-  margin-bottom:25px;
-  color:#1e293b;
-  letter-spacing:1px;
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
 }
 
-/* CONTENT */
-.about p{
-  max-width:800px;
-  font-size:18px;
-  line-height:1.8;
-  color:#555;
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
 }

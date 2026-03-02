@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/contact.css";
 
-import logo from "../assets/image/logo.jpeg";
+import logo from "../assets/image/logo.png";
 import googlePlay from "../assets/image/img1.jpg";
 import appStore from "../assets/image/img2.png";
 

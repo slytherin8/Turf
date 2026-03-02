@@ -44,7 +44,13 @@ export default function Login() {
           </div>
 
           <div className="forgot">Forgot Password?</div>
-          <button className="btn">Log in</button>
+
+          
+
+
+          <button className="btn" onClick={() => navigate("/settings")}>Log in</button>
+
+
           <div className="link">
             New user? <span onClick={() => navigate("/signup")}>Sign up</span>
           </div>

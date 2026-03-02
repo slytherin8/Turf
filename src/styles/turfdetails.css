@@ -6,10 +6,9 @@
 
 /* HEADER */
 .turf-header{
-  background:linear-gradient(to right,#1faa59,#43d17c);
   padding:25px;
   text-align:center;
-  color:white;
+  color:black;
   letter-spacing:2px;
 }
 

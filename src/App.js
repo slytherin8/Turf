@@ -12,6 +12,7 @@ import Signup from "./pages/Signup";
 import TurfDetails from "./pages/TurfDetails";
 import Settings from "./pages/Settings";
 
+
 function App() {
 
   const [open, setOpen] = useState(false);
@@ -23,21 +24,16 @@ function App() {
       <Sidebar open={open} setOpen={setOpen} />
 
       <Routes>
-
-        {/* MAIN */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
-        {/* AUTH */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
-        {/* SIDEBAR */}
         <Route path="/turf-details" element={<TurfDetails />} />
         <Route path="/settings" element={<Settings />} />
         
-
       </Routes>
 
     </BrowserRouter>
