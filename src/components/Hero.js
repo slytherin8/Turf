@@ -1,12 +1,23 @@
 import React from "react";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero">
-      <h1>Hey!</h1>
-      <h2>Wherever You Play, Your Health Defines Your Game.</h2>
-      <p>Every match counts toward a healthier life.</p>
-    </div>
+    <section className="hero">
+      <div className="hero-content">
+
+        <h1>Hey!</h1>
+
+        <h2>
+          Wherever you play, your health defines your game
+        </h2>
+
+        <p>
+          Every match counts toward a healthier life
+        </p>
+
+      </div>
+    </section>
   );
 };
 

@@ -5,12 +5,8 @@ import googleIcon from "../assets/image/google.png";
 import eyeOpen from "../assets/image/eye-open.png";
 import eyeClose from "../assets/image/eye-close.png";
 
-import "../styles/authLayout.css";
-import "../styles/signup.css";
-
 export default function Signup() {
   const navigate = useNavigate();
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
@@ -55,26 +51,27 @@ export default function Signup() {
 
   return (
     <div className="auth-container">
-      {/* LEFT IMAGE */}
       <div
         className="left-image"
         style={{ backgroundImage: `url(${bgImage})` }}
       />
-
-      {/* RIGHT FORM */}
       <div className="right-form">
         <div className="form-box">
           <div className="tab1">Register</div>
           <h2 className="title">Create your account</h2>
 
+<<<<<<< HEAD:src/pages/Signup.jsx
           {error && <div style={{ color: 'red', marginBottom: '10px', fontSize: '14px' }}>{error}</div>}
+=======
+
+
+>>>>>>> 5271f84bc693625359a50dbcde616d401eedd296:src/pages/Signup.js
 
           <button className="google-btn">
             <img src={googleIcon} alt="Google" className="google-icon" />
             <span>Continue with Google</span>
           </button>
 
-          {/* USERNAME */}
           <div className="input-wrapper">
             <input 
               className="input" 
@@ -85,7 +82,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* EMAIL */}
           <div className="input-wrapper">
             <input 
               className="input" 
@@ -97,7 +93,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* PASSWORD */}
           <div className="input-wrapper">
             <input
               className="input"
@@ -115,7 +110,6 @@ export default function Signup() {
             />
           </div>
 
-          {/* CONFIRM PASSWORD */}
           <div className="input-wrapper">
             <input
               className="input"
@@ -129,19 +123,24 @@ export default function Signup() {
               src={showConfirmPassword ? eyeOpen : eyeClose}
               className="input-icon clickable"
               alt="toggle confirm password"
-              onClick={() =>
-                setShowConfirmPassword(!showConfirmPassword)
-              }
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
             />
           </div>
 
+<<<<<<< HEAD:src/pages/Signup.jsx
           <button className="btn" onClick={handleSubmit} disabled={loading}>
             {loading ? 'Signing up...' : 'Sign up'}
           </button>
+=======
+
+          
+
+          <button className="btn" onClick={() => navigate("/settings")}>Sign up</button>
+>>>>>>> 5271f84bc693625359a50dbcde616d401eedd296:src/pages/Signup.js
+
 
           <div className="link">
-            Already have an account?{" "}
-            <span onClick={() => navigate("/")}>Login</span>
+            Already have an account? <span onClick={() => navigate("/")}>Login</span>
           </div>
         </div>
       </div>

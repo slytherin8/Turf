@@ -5,9 +5,6 @@ import googleIcon from "../assets/image/google.png";
 import eyeOpen from "../assets/image/eye-open.png";
 import eyeClose from "../assets/image/eye-close.png";
 
-import "../styles/authLayout.css";
-import "../styles/login.css";
-
 export default function Login() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -48,27 +45,26 @@ export default function Login() {
 
   return (
     <div className="auth-container">
-      {/* LEFT IMAGE */}
       <div
         className="left-image"
         style={{ backgroundImage: `url(${bgImage})` }}
       />
-
-      {/* RIGHT FORM */}
       <div className="right-form">
         <div className="form-box">
           <div className="tab">Login</div>
           <h2 className="title">Welcome Back!</h2>
 
+<<<<<<< HEAD:src/pages/Login.jsx
           {error && <div style={{ color: 'red', marginBottom: '10px', fontSize: '14px' }}>{error}</div>}
 
           {/* GOOGLE BUTTON */}
+=======
+>>>>>>> 5271f84bc693625359a50dbcde616d401eedd296:src/pages/Login.js
           <button className="google-btn">
             <img src={googleIcon} alt="Google" className="google-icon" />
             <span>Continue with Google</span>
           </button>
 
-          {/* EMAIL INPUT (NO CHECK ICON) */}
           <div className="input-wrapper">
             <input 
               className="input" 
@@ -80,7 +76,6 @@ export default function Login() {
             />
           </div>
 
-          {/* PASSWORD INPUT WITH EYE ICON */}
           <div className="input-wrapper">
             <input
               className="input"
@@ -100,13 +95,20 @@ export default function Login() {
 
           <div className="forgot">Forgot Password?</div>
 
+<<<<<<< HEAD:src/pages/Login.jsx
           <button className="btn" onClick={handleSubmit} disabled={loading}>
             {loading ? 'Logging in...' : 'Log in'}
           </button>
+=======
+          
+
+
+          <button className="btn" onClick={() => navigate("/settings")}>Log in</button>
+>>>>>>> 5271f84bc693625359a50dbcde616d401eedd296:src/pages/Login.js
+
 
           <div className="link">
-            New user?{" "}
-            <span onClick={() => navigate("/signup")}>Sign up</span>
+            New user? <span onClick={() => navigate("/signup")}>Sign up</span>
           </div>
         </div>
       </div>
