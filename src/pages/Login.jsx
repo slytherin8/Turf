@@ -11,6 +11,40 @@ import "../styles/login.css";
 export default function Login() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setError('');
+  };
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert(data.message);
+        navigate('/settings');
+      } else {
+        setError(data.message);
+      }
+    } catch (err) {
+      setError('Unable to connect to server. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="auth-container">
@@ -26,6 +60,8 @@ export default function Login() {
           <div className="tab">Login</div>
           <h2 className="title">Welcome Back!</h2>
 
+          {error && <div style={{ color: 'red', marginBottom: '10px', fontSize: '14px' }}>{error}</div>}
+
           {/* GOOGLE BUTTON */}
           <button className="google-btn">
             <img src={googleIcon} alt="Google" className="google-icon" />
@@ -34,7 +70,14 @@ export default function Login() {
 
           {/* EMAIL INPUT (NO CHECK ICON) */}
           <div className="input-wrapper">
-            <input className="input" type="email" placeholder="Email" />
+            <input 
+              className="input" 
+              type="email" 
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
 
           {/* PASSWORD INPUT WITH EYE ICON */}
@@ -42,7 +85,10 @@ export default function Login() {
             <input
               className="input"
               type={showPassword ? "text" : "password"}
+              name="password"
               placeholder="Password"
+              value={formData.password}
+              onChange={handleChange}
             />
             <img
               src={showPassword ? eyeOpen : eyeClose}
@@ -54,7 +100,9 @@ export default function Login() {
 
           <div className="forgot">Forgot Password?</div>
 
-          <button className="btn" onClick={() => navigate("/settings")}>Log in</button>
+          <button className="btn" onClick={handleSubmit} disabled={loading}>
+            {loading ? 'Logging in...' : 'Log in'}
+          </button>
 
           <div className="link">
             New user?{" "}
