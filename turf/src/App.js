@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import TurfDetails from "./pages/TurfDetails";
 import Settings from "./pages/Settings";
+import AuthSuccess from "./pages/AuthSuccess";
 
 
 function App() {
@@ -25,11 +26,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/auth/success" element={<AuthSuccess />} />
 
         <Route path="/turf-details" element={<TurfDetails />} />
         <Route path="/settings" element={<Settings />} />
