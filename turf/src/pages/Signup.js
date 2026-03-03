@@ -23,6 +23,10 @@ export default function Signup() {
     setError('');
   };
 
+  const handleGoogleSignup = () => {
+    window.location.href = 'http://localhost:5000/api/auth/google';
+  };
+
   const handleSubmit = async () => {
     setLoading(true);
     setError('');
@@ -62,7 +66,7 @@ export default function Signup() {
 
           {error && <div style={{ color: 'red', marginBottom: '10px', fontSize: '14px' }}>{error}</div>}
 
-          <button className="google-btn">
+          <button className="google-btn" onClick={handleGoogleSignup} type="button">
             <img src={googleIcon} alt="Google" className="google-icon" />
             <span>Continue with Google</span>
           </button>
