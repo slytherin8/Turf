@@ -1,0 +1,18 @@
+/* Make full page height */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Push footer to bottom */
+.app > *:not(.footer) {
+  flex: 1;
+}
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
