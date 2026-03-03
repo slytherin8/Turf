@@ -17,6 +17,10 @@ export default function Login() {
     setError('');
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = 'http://localhost:5000/api/auth/google';
+  };
+
   const handleSubmit = async () => {
     setLoading(true);
     setError('');
@@ -31,8 +35,11 @@ export default function Login() {
       const data = await response.json();
 
       if (data.success) {
+        // Store user info in localStorage
+        localStorage.setItem('user', JSON.stringify(data.user));
+        localStorage.setItem('isLoggedIn', 'true');
         alert(data.message);
-        navigate('/settings');
+        navigate('/home');
       } else {
         setError(data.message);
       }
@@ -57,7 +64,7 @@ export default function Login() {
           {error && <div style={{ color: 'red', marginBottom: '10px', fontSize: '14px' }}>{error}</div>}
 
           {/* GOOGLE BUTTON */}
-          <button className="google-btn">
+          <button className="google-btn" onClick={handleGoogleLogin} type="button">
             <img src={googleIcon} alt="Google" className="google-icon" />
             <span>Continue with Google</span>
           </button>
